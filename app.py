@@ -1,10 +1,13 @@
 from flask import Flask, request, render_template, redirect
 from pymongo import MongoClient
+import os
 
 app = Flask(__name__)
 
 # MongoDB Atlas Connection
-client = MongoClient("YOUR API MONGO")
+MONGO_URI = os.environ.get("MONGO_URI")
+
+client = MongoClient(MONGO_URI)
 
 # Database
 db = client["CodeAlphaDB"]
