@@ -4,7 +4,7 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # MongoDB Atlas Connection
-client = MongoClient("mongodb+srv://abrarruddin1234_db_user:syram8B1aRVbh7aS@codealphacluster.cmnvxfv.mongodb.net/?appName=CodeAlphaCluster")
+client = MongoClient("YOUR API MONGO")
 
 # Database
 db = client["CodeAlphaDB"]
